@@ -66,5 +66,11 @@ Route::post('/save-product', 'ProductController@save_product');
 Route::post('/update-product/{product_id}', 'ProductController@update_product');
 
 //them vao gio hang- save-cart
+Route::post('/update-cart-quantity', 'CartController@update_cart_quantity');
 Route::post('/save-cart', 'CartController@save_cart');
 Route::get('/show-cart', 'CartController@show_cart');
+Route::get('/delete-to-cart/{rowId}', 'CartController@delete_to_cart');
+
+//login-checkout kiem tra khach hang co dang nhap hay chua de thanh toan
+
+Route::get('/login-checkout', 'CheckoutController@login_checkout'); 
