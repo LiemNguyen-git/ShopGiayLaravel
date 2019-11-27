@@ -74,3 +74,5 @@ Route::get('/delete-to-cart/{rowId}', 'CartController@delete_to_cart');
 //login-checkout kiem tra khach hang co dang nhap hay chua de thanh toan
 
 Route::get('/login-checkout', 'CheckoutController@login_checkout'); 
+Route::post('/add-user', 'CheckoutController@add_user');
+Route::get('/checkout', 'CheckoutController@checkout'); 
