@@ -12,7 +12,7 @@ session_start();
 class CategoryProduct extends Controller
 {
 
-    public function AuthLogin() //kiem tra co admin admin id hay k, neu k co thif tra ve dashboard
+    public function AuthLogin() //kiem tra co admin id hay k, neu k co thif tra ve dashboard
         {
             $admin_id = Session::get('admin_id');
             if($admin_id)

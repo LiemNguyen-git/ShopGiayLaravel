@@ -11,6 +11,7 @@
 								
 								  <!-- Wrapper for slides -->
 								    <div class="carousel-inner">
+										
 										<div class="item active">
 										  <a href=""><img src="{{URL::to('public/frontend/images/giaytreem1.jpg')}}" height="80" width="80" alt=""></a>
 										  <a href=""><img src="{{URL::to('public/frontend/images/giaytreem2.jpg')}}" height="80" width="80" alt=""></a>

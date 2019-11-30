@@ -7,8 +7,9 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Đăng nhập tài khoản của bạn</h2>
-						<form action="#">
-							<input type="text" name="email_account" placeholder="Tên tài khoản" />
+						<form action="{{URL::to('/login-customer')}}" method="POST">
+								{{csrf_field()}}
+							<input type="text" name="email_account" placeholder="Nhập tài khoản Email" />
 							<input type="password"  name="password_account" placeholder="Mật khẩu" />
 							<span>
 								<input type="checkbox" class="checkbox"> 
@@ -24,17 +25,17 @@
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>Đăng ký tài khoản mới</h2>
-						<form action="{{URL::to('/add-user')}}" method="POST">
+						<form action="{{URL::to('/add-customer')}}" method="POST">
 								{{csrf_field()}}
 
-							<input type="text" name="user_name" placeholder="Họ tên"/>
-							<input type="email" name="user_email" placeholder="Địa chỉ Email"/>
-							<input type="password" name="user_password"  placeholder="Mật khẩu"/>
-							<input type="text" name="user_phone"  placeholder="Số điện thoại"/>
-							<input type="text" name="user_address"  placeholder="Địa chỉ"/>	
-							<input type="text" name="user_sex"  placeholder="Giới tính"/>
-							<input type="date" name="user_birthday"  placeholder="Ngày sinh"/>
+							<input type="text" name="customer_name" placeholder="Họ tên"/>
+							<input type="email" name="customer_email" placeholder="Địa chỉ Email"/>
+							<input type="password" name="customer_password"  placeholder="Mật khẩu"/>
+							<input type="text" name="customer_phone"  placeholder="Số điện thoại"/>
+							<input type="text" name="customer_address"  placeholder="Địa chỉ"/>	
+							<input type="text" name="customer_sex"  placeholder="Giới tính"/>				                   		<input type="date" name="customer_birthday"  placeholder="Ngày sinh"/>
 							<button type="submit" class="btn btn-default">Đăng ký</button>
+							
 						</form>
 					</div><!--/sign up form-->
 				</div>
