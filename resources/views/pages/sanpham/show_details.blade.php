@@ -58,6 +58,8 @@
 								<p><b>Điều kiện:</b> Mới 100%</p>
 								<p><b>Loại sản phẩm:</b> {{$value->category_name}}</p>
 								<p><b>Thương hiệu:</b> {{$value->brand_name}}</p>
+								<p><b>Màu:</b> {{$value->product_color}}</p>
+								<p><b>Kích thước:</b> {{$value->product_size}}</p>
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 						</div>

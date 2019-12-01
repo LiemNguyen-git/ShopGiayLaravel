@@ -32,7 +32,8 @@ class HomeController extends Controller
         $cate_product = DB::table('tblcategory_product')->where('category_status','0')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand_product')->where('brand_status','0')->orderby('brand_id','desc')->get();
 
+        $search_product = DB::table('tbl_product')->where('product_name','like','%'.$keywords.'%')->get();
 
-        return view('pages.sanpham.search')->with('category',$cate_product)->with('brand',$brand_product);
+        return view('pages.sanpham.search')->with('category',$cate_product)->with('brand',$brand_product)->with('search_product',$search_product);
     }
 }

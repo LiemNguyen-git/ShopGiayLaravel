@@ -6,47 +6,41 @@
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="#">Trang chủ</a></li>
-				  <li class="active">Thanh toán giỏ hàng</li>
+				  <li class="active">Giỏ hàng của bạn</li>
 				</ol>
-			</div><!--/breadcrums-->
-
+			</div>
 
 			<div class="register-req">
-				<p>Vui lòng đăng ký hoặc đăng nhập để thanh toán giỏ hàng.</p>
+				<p>Vui lòng đăng nhập hoặc đăng ký nếu chưa có tài khoản để có thể mua và xem lịch sử mua hàng.</p>
 			</div><!--/register-req-->
-			<form>
-				<div class="shopper-informations">
-					<div class="row">
-						
-						<div class="col-sm-10 clearfix">
-							<div class="bill-to">
-								<p>Nhập thông tin nhận hàng</p>
-								<div class="form-one">
-									<form action="{{URL::to('/save-checkout-customer')}}" method="POST">
-										{{csrf_field()}}
-										<input type="text" name="shipping_email" placeholder="Email*">
-										<input type="text" name="shipping_name" placeholder="Họ và tên*">
-										<input type="text" name="shipping_address" placeholder="Địa chỉ nhận hàng *">
-										<input type="text" name="shipping_phone" placeholder="Số điện thoại *">
-										<textarea name="shipping_notes" placeholder="Ghi chú đơn hàng của bạn." rows="10"></textarea>
-										<input type="submit" name="send_order" value="Thanh toán" class="btn btn-primary btn-sm">
-									</form>
-								</div>
-								
+
+			<div class="shopper-informations">
+				<div class="row">
+					
+					<div class="col-sm-12 clearfix">
+						<div class="bill-to">
+							<p>Điền thông tin nhận hàng</p>
+							<div class="form-one">
+								<form action="{{URL::to('/save-checkout-customer')}}" method="POST">
+									{{csrf_field()}}
+									
+									<input type="text" name="shipping_email" placeholder="Email*">
+									<input type="text" name="shipping_name" placeholder="Họ và tên*">
+									<input type="text" name="shipping_address" placeholder="Địa chỉ">
+									<input type="text" name="shipping_phone" placeholder="Số điện thoại*">
+									<textarea name="shipping_notes" placeholder="Ghi chú nhận hàng" rows="6"></textarea>
+
+									<input type="submit" value="Thanh toán" name="send_order" class="btn btn-primary btn-sm">
+
+								</form>
 							</div>
+							
 						</div>
-						{{-- <div class="col-sm-4">
-							<div class="order-message">
-								<p>Ghi chú gửi hàng</p>
-								
-								
-							</div>	
-						</div>	 --}}				
-					</div>
+					</div>			
 				</div>
-			</form>
+			</div>
 			<div class="review-payment">
-				<h2>Xem lại giỏ hàng</h2>
+				<h2>Xem lại giở hàng</h2>
 			</div>
 
 			

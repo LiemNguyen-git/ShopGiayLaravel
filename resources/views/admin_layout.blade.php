@@ -45,7 +45,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
         <li>
-            <input type="text" class="form-control search" placeholder=" Search">
+        	<form action="{{URL::to('/tim-kiem-admin')}}" method="POST">
+							{{csrf_field()}}
+            <input type="text" name="keywords_search_admin" placeholder="Nhập sản phẩm cần tìm" />
+			<input type="submit" style="margin-top: 0; color:all;#GGG;width:50px;" name="search_items" class="btn btn-primary btn-sm" value="Tìm"  />
+        </form>
         </li>
         <!-- user login dropdown start-->
         <li class="dropdown">
@@ -89,6 +93,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     </a>
                 </li>
                 
+                 <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Đơn hàng</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/manage-order')}}">Quản lý đơn hàng</a></li>
+						
+                       
+                    </ul>
+                </li>
+
                 <li class="sub-menu">
                     <a href="javascript:;">
                         <i class="fa fa-book"></i>

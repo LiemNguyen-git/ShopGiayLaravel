@@ -33,7 +33,8 @@
 							<input type="password" name="customer_password"  placeholder="Mật khẩu"/>
 							<input type="text" name="customer_phone"  placeholder="Số điện thoại"/>
 							<input type="text" name="customer_address"  placeholder="Địa chỉ"/>	
-							<input type="text" name="customer_sex"  placeholder="Giới tính"/>				                   		<input type="date" name="customer_birthday"  placeholder="Ngày sinh"/>
+							<input type="text" name="customer_sex"  placeholder="Giới tính"/>				                   		
+							<input type="date" name="customer_birthday"  placeholder="Ngày sinh"/>
 							<button type="submit" class="btn btn-default">Đăng ký</button>
 							
 						</form>

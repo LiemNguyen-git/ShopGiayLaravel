@@ -5,7 +5,7 @@
 <div class="features_items">
 						<h2 class="title text-center">KẾT QUẢ TÌM KIẾM</h2>
 
-						{{-- @foreach($all_product as $key => $product)
+						@foreach($search_product as $key => $product)
 
 						<form action="{{URL::to('/save-cart')}}" method="POST">		
 							{{ csrf_field() }}
@@ -30,19 +30,19 @@
 										</div>
 										
 								</div>
-								{{-- <div class="choose">
+								<div class="choose">
 									<ul class="nav nav-pills nav-justified">
 										<li><a href="#"><i class="fa fa-plus-square"></i>Thêm yêu thích</a></li>
 										<li><a href="#"><i class="fa fa-plus-square"></i>Thêm so sánh</a></li>
 									</ul>
-								</div> --}}
+								</div>
 							</div>
 						</div>
 						
 						</a>
 						</form>
 
-						@endforeach --}}
+						@endforeach
 						
 					</div>
 					<!--features_items-->

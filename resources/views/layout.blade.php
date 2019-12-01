@@ -94,7 +94,8 @@
 								
 								<?php
 									$customer_id = Session::get('customer_id');
-									if($customer_id != NULL)
+									$shipping_id = Session::get('shipping_id');
+									if($customer_id != NULL && $shipping_id != NULL)
 									{
 
 								?>
@@ -102,14 +103,22 @@
 								
 
 								<?php
-									}else{
+									}
+									elseif($customer_id != NULL && $shipping_id != NULL)
+									{
 								?>
 
-								<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+								<li><a href="{{URL::to('/payment')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
 
 								<?php
-								}
+								}else{
 								?>			
+								<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a></li>
+								<?php
+								}
+								?>	
+
+								
 								<li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
 
 								<?php
@@ -118,14 +127,14 @@
 									{
 
 								?>
-								<li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng xuất </a></li>
+								<li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng xuất  </a></li>
 								
 								<li> </li>
 								<?php
 									}else{
 								?>
 
-								<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Đăng nhập</a></li>
+								<li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-lock"></i> Đăng nhập </a></li>
 
 								<?php
 								}
@@ -175,7 +184,7 @@
 							{{csrf_field()}}
 						<div class="search_box pull-right">
 							<input type="text" name="keywords_search" placeholder="Nhập sản phẩm cần tìm"/>
-							<input type="submit" name="search_items" class="btn btn-info btn-sm" value="Tìm" />
+							<input type="submit" style="margin-top: 0; color:all;#GGG;width:50px;" name="search_items" class="btn btn-primary btn-sm" value="Tìm"  />
 						</div>
 						</div>
 					</form>
