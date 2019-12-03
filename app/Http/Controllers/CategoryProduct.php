@@ -56,14 +56,6 @@ class CategoryProduct extends Controller
     	//neu them thanh cong thi tra kq ve all_category_product
     	return Redirect::to('add-category-product');
     }
-    
-    public function unactive_category_product1($category_product_id1)
-    {
-        $this->AuthLogin();
-        DB::table('tblcategory_product')->where('category_id', $category_product_id)->update(['category_status'=>0]);
-        Session::put('message','tắt kích hoạt loại sản phẩm thành công.');
-        return Redirect::to('all-category-product');
-    }
 
     public function unactive_category_product($category_product_id)
     {
