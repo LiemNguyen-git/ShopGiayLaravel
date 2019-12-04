@@ -39,7 +39,7 @@ class CheckoutController extends Controller
     	$data['customer_name'] = $request->customer_name;
     	$data['customer_phone'] = $request->customer_phone;
     	$data['customer_email'] = $request->customer_email;
-    	$data['customer_password'] = $request->customer_password;
+    	$data['customer_password'] = md5($request->customer_password);
     	$data['customer_address'] = $request->customer_address;
     	$data['customer_sex'] = $request->customer_sex;
     	$data['customer_birthday'] = $request->customer_birthday;
@@ -120,6 +120,7 @@ class CheckoutController extends Controller
             {
 
                 $order_data = array();
+               /* $order_data['customer_name'] = Session::get('customer_name');*/
                 $order_data['customer_id'] = Session::get('customer_id');
                 $order_data['shipping_id'] = Session::get('shipping_id');
                 $order_data['payment_id'] = $payment_id;
