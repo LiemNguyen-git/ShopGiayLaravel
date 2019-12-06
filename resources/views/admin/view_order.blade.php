@@ -41,7 +41,7 @@
           </tr>
         </thead>
         <tbody>   
-
+          
           <tr>
 
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>

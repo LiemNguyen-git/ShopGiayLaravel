@@ -1,9 +1,10 @@
 @extends('layout')
 @section('content')
 <div class="features_items"><!--features_items-->
+	
 
 						@foreach($category_name as $key => $name)
-						<h2 class="title text-center">{{$name->category_name}} </h2>
+						<h2 class="title text-center" style="color: #04B4AE;">{{$name->category_name}} </h2>
 						@endforeach
 						@foreach($category_by_id as $key => $product)
 

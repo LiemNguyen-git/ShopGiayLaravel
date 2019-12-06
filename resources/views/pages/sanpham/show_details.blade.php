@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
 @foreach($details_product as $key => $value)
+
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
@@ -83,25 +84,34 @@
 							
 							<div class="tab-pane fade " id="reviews" >
 								<div class="col-sm-12">
-									<ul>
+									{{-- <ul>
 										<li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
 										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 										<li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
-									</ul>
-									{{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-									<p><b>Write Your Review</b></p> --}}
+									</ul> --}}
+									<p>Giày hay giầy là một vật dụng đi vào bàn chân con người để bảo vệ và làm êm chân trong khi thực hiện các hoạt động khác nhau. Giày cũng được sử dụng như một món đồ trang trí.
+
+									Thiết kế của giày đã đa dạng và phong phú vô cùng theo thời gian, văn hoá và mục đích sử dụng. Ngoài ra thời trang cũng chi phối nhiều yếu tố thiết kế, chẳng hạn như giày có gót rất cao (giày cao gót) hay có gót phẳng (giày thể thao). Giày dép hiện đại rất khác nhau về mục đích sử dụng, phong cách và giá thành. Dép đơn giản có thể rất mỏng và chỉ bao gồm một dây duy nhất trong khi giày thời trang hiện đại có thể được làm từ các vật liệu rất tốn kém, kết cấu phức tạp và giá hàng ngàn đôla một đôi. Các loại giày khác cho các mục đích sử dụng khác như giày leo núi hay giày trượt tuyết,...
+
+									Giày có truyền thống được làm từ da, gỗ, vải,... nhưng đang ngày càng được làm từ cao su, nhựa và các vật liệu hoá dầu khác.</p>
 									
-									<form action="#">
+										
+
+									{{-- <form action="{{URL::to('/save-comment')}}" method="POST">
+											{{csrf_field()}}
+										@foreach($comment_product as $key => $comment_pro)
 										<span>
-											<input type="text" placeholder="Your Name"/>
-											<input type="email" placeholder="Email Address"/>
+											<input type="text" name="comment_name" value="" />
+											<input type="email" name="comment_email" placeholder="Email Address"/>
 										</span>
 										<textarea name="" ></textarea>
 										
 										<button type="button" class="btn btn-default pull-right">
 											Submit
 										</button>
-									</form>
+										@endforeach
+									</form> --}}
+									
 								</div>
 							</div>
 							
@@ -109,7 +119,7 @@
 					</div><!--/category-tab-->
 @endforeach					
 					<div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">Sản phẩm liên quan</h2>
+						<h2 class="title text-center" style="color: #04B4AE;">Sản phẩm liên quan</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">

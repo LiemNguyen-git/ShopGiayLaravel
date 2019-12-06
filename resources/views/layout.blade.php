@@ -1,6 +1,8 @@
  <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -24,7 +26,7 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
-<body>
+<body background="control-carousel">
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -184,7 +186,7 @@
 							{{csrf_field()}}
 						<div class="search_box pull-right">
 							<input type="text" name="keywords_search" placeholder="Nhập sản phẩm cần tìm"/>
-							<input type="submit" style="margin-top: 0; color:all;#GGG;width:50px;" name="search_items" class="btn btn-primary btn-sm" value="Tìm"  />
+							<input type="submit" style="margin-top: 0; color:#GGG;width:60px;" name="search_items" class="btn btn-info btn-sm" value="Tìm"  />
 						</div>
 						</div>
 					</form>
@@ -264,7 +266,7 @@
 			<div class="row">
 				<div class="col-sm-3">
 					<div class="left-sidebar">
-						<h2>Loại sản phẩm</h2>
+						<h2 style="color: #04B4AE;">Loại sản phẩm</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							
 							@foreach($category as $key => $cate)
@@ -280,7 +282,7 @@
 						</div><!--/category-products-->
 					
 						<div class="brands_products"><!--brands_products-->
-							<h2>Thương hiệu</h2>
+							<h2 style="color: #04B4AE;">Thương hiệu</h2>
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 
@@ -310,7 +312,7 @@
 	</section>
 	
 	<footer id="footer"><!--Footer-->
-		<div class="footer-top">
+		{{-- <div class="footer-top">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-2">
@@ -388,7 +390,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		
 		<div class="footer-widget">
 			<div class="container">
@@ -429,7 +431,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-2">
+					{{-- <div class="col-sm-2">
 						<div class="single-widget">
 							<h2>About Shopper</h2>
 							<ul class="nav nav-pills nav-stacked">
@@ -450,7 +452,7 @@
 								<p>Get the most recent updates from <br />our site and be updated your self...</p>
 							</form>
 						</div>
-					</div>
+					</div> --}}
 					
 				</div>
 			</div>
@@ -459,8 +461,8 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+					<p class="pull-left">Hãy đến với thichgiay.ga chúng tôi luôn chào đón bạn.</p>
+					
 				</div>
 			</div>
 		</div>

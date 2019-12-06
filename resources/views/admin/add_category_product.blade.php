@@ -50,6 +50,6 @@
 
                         </div>
                     </section>
-
+                    
             </div>
 @endsection

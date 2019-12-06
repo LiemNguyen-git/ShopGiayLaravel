@@ -3,7 +3,7 @@
 
 <!--features_items-->
 <div class="features_items">
-						<h2 class="title text-center">SẢN PHẨM MỚI NHẤT</h2>
+						<h2 class="title text-center" style="color: #04B4AE;">SẢN PHẨM MỚI NHẤT</h2>
 
 						@foreach($all_product as $key => $product)
 

@@ -22,7 +22,7 @@
 											<p>{{$product->product_name}}</p>
 											<input type="hidden" name="qty" type="number" min="1" value="1" /> 
 											<input name="productid_hidden" type="hidden" value="{{$product->product_id}}" />
-												<button type="Submit" class="btn btn-fefault cart">
+												<button type="Submit" class="btn btn-success cart">
 											<i class="fa fa-shopping-cart"></i>
 												Thêm vào giỏ hàng
 											</button>
