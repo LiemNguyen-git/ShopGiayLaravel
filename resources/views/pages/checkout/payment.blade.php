@@ -86,7 +86,7 @@
 						<ul>
 							<li>Tổng giỏ hàng <span>{{Cart::total().' '.'VNĐ'}}</span></li>
 							<li>Thuế <span>{{Cart::tax().' '.'VNĐ'}}</span></li>
-							<li>Phí vận chuyển <span>Free</span></li>
+							<li>Phí vận chuyển <span>Miễn Phí</span></li>
 							<li>Thành tiền <span>{{Cart::total().' '.'VNĐ'}}</span></li>
 						</ul>
 							{{-- <a class="btn btn-default update" href="">Update</a> --}}
