@@ -18,7 +18,7 @@ class CreateTblcategoryProduct extends Migration
             $table->string('category_name');
             $table->text('category_desc');
             $table->integer('category_status');
-            $table->timestamps();// lay thoi gian hien tai tao csdl
+            // lay thoi gian hien tai tao csdl
         });
     }
 
