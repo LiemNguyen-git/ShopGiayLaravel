@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->integer('voucher')->unsigned();
             $table->foreign('voucher')->references('id')->on('users');
             $table->rememberToken();
-            
+            $table->timestamps();
         });
     }
 

@@ -18,7 +18,7 @@ class CreateTblBrandProduct extends Migration
             $table->string('brand_name');
             $table->text('brand_desc');
             $table->integer('brand_status');
-            // lay thoi gian hien tai tao csdl
+            $table->timestamps();// lay thoi gian hien tai tao csdl
         });
     }
 

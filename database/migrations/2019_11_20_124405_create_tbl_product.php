@@ -22,8 +22,7 @@ class CreateTblProduct extends Migration
             $table->string('product_price');
             $table->string('product_image');
             $table->integer('product_status');
-            $table->integer('TBLCATEGORY_PRODUCTcategory_id')->unsigned();
-            $table->foreign('TBLCATEGORY_PRODUCTcategory_id')->references('product_id')->on('tbl_product');
+            $table->timestamps();
             
         });
     }

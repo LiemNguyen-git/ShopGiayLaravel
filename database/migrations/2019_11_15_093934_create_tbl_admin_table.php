@@ -21,7 +21,7 @@ class CreateTblAdminTable extends Migration
             $table->string('admin_phone');
             $table->integer('voucher')->unsigned();
             $table->foreign('voucher')->references('admin_id')->on('tbl_admin');
-             //tu dong them thoi gian tao table
+            $table->timestamps(); //tu dong them thoi gian tao table
            
         });
     }
