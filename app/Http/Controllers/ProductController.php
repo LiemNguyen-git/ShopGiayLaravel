@@ -176,13 +176,11 @@ class ProductController extends Controller
         ->join('tblcategory_product','tblcategory_product.category_id','=','tbl_product.category_id')
         ->join('tbl_brand_product','tbl_brand_product.brand_id','=','tbl_product.brand_id')
         ->where('tbl_product.product_id',$product_id)->get();
-       
-       foreach ($details_product as $key => $value) 
-        {
-            $category_id = $value->category_id;
-        }
-       
-
+        
+        foreach ($details_product as $key => $value) 
+            {
+                $category_id = $value->category_id;
+            }
         $related_product = DB::table('tbl_product') //san pham lien quan
         ->join('tblcategory_product','tblcategory_product.category_id','=','tbl_product.category_id')
         ->join('tbl_brand_product','tbl_brand_product.brand_id','=','tbl_product.brand_id')
@@ -192,14 +190,13 @@ class ProductController extends Controller
         return view('pages.sanpham.show_details')->with('category',$cate_product)->with('brand',$brand_product)->with('details_product',$details_product)->with('related',$related_product);
     }
    
-    /*public function admin_search(Request $request)   
+  /*  public function show_comment(Request $request)   
     {
-        $keywords = $request->keywords_search_admin; 
-        $cate_product = DB::table('tblcategory_product')->where('category_status','0')->orderby('category_id','desc')->get();
-        $brand_product = DB::table('tbl_brand_product')->where('brand_status','0')->orderby('brand_id','desc')->get();
-
-        $search_product = DB::table('tbl_product')->where('product_name','like','%'.$keywords.'%')->get();
-
-        return view('admin_search')->with('category',$cate_product)->with('brand',$brand_product)->with('search_product',$search_product);
+         $comment_product = DB::table('tbl_comment') //binh luan
+        ->join('tbl_product','tbl_product.product_id','=','tbl_comment.product_id')
+        ->join('tbl_customer','tbl_customer.customer_id','=','tbl_comment.customer_id')
+        ->select('tbl_comment.*','tbl_customers.*')->first(4);
+        $manage_comment = view('pages.sanpham.show_details')->with('comment_product',$comment_product);
+            return view('pages.sanpham.show_details')->with('pages.sanpham.show_detailsr',$manage_comment);
     }*/
 }

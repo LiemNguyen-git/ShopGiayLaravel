@@ -5,8 +5,8 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="#">Trang chủ</a></li>
-				  <li class="active">Giỏ hàng của bạn</li>
+				  <li><a href="http://localhost/MyLaravel/trang-chu">Trang chủ</a></li>
+				  <li class="active" style="text-align: center;">Giỏ hàng của bạn</li>
 				</ol>
 			</div>
 			<div class="table-responsive cart_info">
@@ -18,7 +18,9 @@
 					<thead>
 						<tr class="cart_menu" >
 							<td class="image">Hình ảnh</td>
+							
 							<td class="description"></td>
+							
 							<td class="price">Giá</td>
 							{{-- <td class="size">Kích thước</td>
 							<td class="color">Màu</td> --}}
@@ -33,6 +35,7 @@
 							<td class="cart_product">
 								<a href=""><img src="{{URL::to('public/uploads/product/'.$v_content->options->image)}}" width="100" alt="" /></a>
 							</td>
+							
 							<td class="cart_description">
 								<h4><a href="">{{$v_content->name}}</a></h4>
 								<p>{{$v_content->id}}</p>
@@ -152,7 +155,7 @@
 						<ul>
 							<li>Tổng giỏ hàng <span>{{Cart::total().' '.'VNĐ'}}</span></li>
 							<li>Thuế <span>{{Cart::tax().' '.'VNĐ'}}</span></li>
-							<li>Phí vận chuyển <span>Miễn Phí</span></li>
+							<li>Phí vận chuyển <span>Free</span></li>
 							<li>Thành tiền <span>{{Cart::total().' '.'VNĐ'}}</span></li>
 						</ul>
 							{{-- <a class="btn btn-default update" href="">Update</a> --}}

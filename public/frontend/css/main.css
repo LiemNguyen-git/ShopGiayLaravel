@@ -68,7 +68,7 @@ a#scrollUp i{
 **************************/
 
 .header_top {
-  background: none repeat scroll 0 0 #F0F0E9;
+  background: none repeat scroll 0 0 #faebd7;
 }
 
 .contactinfo ul li:first-child{
@@ -137,7 +137,7 @@ a#scrollUp i{
 }
 
 .header-middle .container .row {
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #00ffff;
   margin-left: 0;
   margin-right: 0;
   padding-bottom: 20px;
@@ -215,7 +215,7 @@ a#scrollUp i{
 
 
 .shop-menu ul li a:hover {
-	color:#fe980f;
+	color:#04B4AE;
 	background:#fff;
 }
 
@@ -239,7 +239,7 @@ a#scrollUp i{
 }
 
 .mainmenu ul li a {
-	color: #696763;
+	color: #00ffff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	font-weight: 300;
@@ -249,13 +249,13 @@ a#scrollUp i{
 
 .mainmenu ul li a:hover, .mainmenu ul li a.active,  .shop-menu ul li a.active{
 	background:none;
-	color:#fdb45e;
+	color:#00ffff;
 }
 
 .search_box input {
-  background: #F0F0E9;
+  background: #faebd7;
   border: medium none;
-  color: #B2B2B2;
+  color: #a52a2a;
   font-family: 'roboto';
   font-size: 12px;
   font-weight: 300;
@@ -545,7 +545,7 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-  background: #D6D6D0;
+  background: #faebd7;
   padding-top: 10px;
 }
 
@@ -660,7 +660,7 @@ ul.sub-menu {
   padding-top: 15px;
 }
 .left-sidebar h2, .brands_products h2 {
-  color: #FE980F;
+  color:#00FFFF;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -669,6 +669,21 @@ ul.sub-menu {
   text-transform: uppercase;
   position: relative;
   z-index:3;
+}
+
+.left-sidebar h2, .brands_products h2 {
+    color: aqua;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 auto 30px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
 }
 
 .left-sidebar h2:after, h2.title:after{
@@ -862,7 +877,7 @@ h2.title {
 }
 
 .productinfo h2{
-	color: #FE980F;
+	color: #000000;
 	font-family: 'Roboto', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
@@ -1282,7 +1297,7 @@ h2.title {
 
 
 .cart {
-  background: #FE980F;
+  background: #7fffd4;
   border: 0 none;
   border-radius: 0;
   color: #FFFFFF;
@@ -1480,7 +1495,7 @@ h2.title {
 }
 
 .login-form form button, .signup-form form button {
-  background: #FE980F;
+  background: #00ffff;
   border: medium none;
   border-radius: 0;
   color: #FFFFFF;
@@ -1505,7 +1520,7 @@ h2.title {
 
 
 .or{
-	background: #FE980F;
+	background: #00ffff;
 	border-radius: 40px;
 	color: #FFFFFF;
 	font-family: 'Roboto', sans-serif;
@@ -1537,12 +1552,12 @@ h2.title {
 }
 
 .breadcrumbs .breadcrumb li a {
-  background:#FE980F;
+  background:#000000;
   color: #FFFFFF;
   padding: 3px 7px;
 }
 
-.breadcrumbs .breadcrumb li a:after {
+/*.breadcrumbs .breadcrumb li a:after {
   content:"";
   height:auto;
   width: auto;
@@ -1553,7 +1568,7 @@ h2.title {
   top: 11px;
   left:48px;
 
-}
+}*/
 
 .breadcrumbs .breadcrumb > li + li:before {
   content: " ";
@@ -1566,7 +1581,7 @@ h2.title {
 
 
 #cart_items .cart_info .cart_menu {
-  background: #FE980F;
+  background: #000000;
   color: #fff;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -1773,7 +1788,7 @@ h2.title {
 }
 
 .update, .check_out {
-  background: #FE980F;
+  background: #00ffff;
   border-radius: 0;
   color: #FFFFFF;
   margin-top: 18px;
@@ -2391,11 +2406,12 @@ h2.title {
   border: 1px solid#F7F7F0
 }
 
+
 .btn.btn-primary {
-  background:#FE980F;
-  border: 0 none;
-  border-radius: 0;
-  margin-top: 16px;
+    background: #00ffff;
+    border: 0 none;
+    border-radius: 0;
+    margin-top: 16px;
 }
 
 .blank-arrow {

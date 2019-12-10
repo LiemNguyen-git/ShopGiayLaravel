@@ -61,6 +61,7 @@
 								<p><b>Thương hiệu:</b> {{$value->brand_name}}</p>
 								<p><b>Màu:</b> {{$value->product_color}}</p>
 								<p><b>Kích thước:</b> {{$value->product_size}}</p>
+								
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 						</div>
@@ -97,20 +98,20 @@
 									
 										
 
-									{{-- <form action="{{URL::to('/save-comment')}}" method="POST">
-											{{csrf_field()}}
-										@foreach($comment_product as $key => $comment_pro)
-										<span>
+									<form action="" method="">
+											
+										
+										{{-- <span>
 											<input type="text" name="comment_name" value="" />
 											<input type="email" name="comment_email" placeholder="Email Address"/>
-										</span>
-										<textarea name="" ></textarea>
+										</span> --}}
+										<textarea name=""  placeholder="Nhập bình luận của bạn." rows="3" ></textarea>
 										
-										<button type="button" class="btn btn-default pull-right">
+										<button type="button" class="btn btn-default pull-right " >
 											Submit
 										</button>
-										@endforeach
-									</form> --}}
+										
+									</form>
 									
 								</div>
 							</div>

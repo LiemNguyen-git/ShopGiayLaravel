@@ -18,8 +18,6 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
-            $table->integer('voucher')->unsigned();
-            $table->foreign('voucher')->references('id')->on('users');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -195,7 +195,7 @@ class CheckoutController extends Controller
             ->join('tbl_customers','tbl_order.customer_id','=','tbl_customers.customer_id')
             ->join('tbl_shipping','tbl_order.shipping_id','=','tbl_shipping.shipping_id')
             ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_id')
-            ->select('tbl_order.*','tbl_customers.*', 'tbl_shipping.*','tbl_order_details.*')->first();
+            ->select('tbl_order.*','tbl_customers.*', 'tbl_shipping.*','tbl_order_details.*')->first(4);
             
             $manage_order_by_id = view('admin.view_order')->with('order_by_id',$order_by_id);
             return view('admin_layout')->with('admin.view_order',$manage_order_by_id);//trang admin-layout se chua all_brand_product la bien $manager_brand_product

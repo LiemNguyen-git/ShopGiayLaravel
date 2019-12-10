@@ -5,13 +5,13 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-				  <li><a href="#">Trang chủ</a></li>
+				  <li><a href="http://localhost/MyLaravel/trang-chu">Trang chủ</a></li>
 				  <li class="active">Giỏ hàng của bạn</li>
 				</ol>
 			</div>
 
 			<div class="register-req">
-				<p>Vui lòng đăng nhập hoặc đăng ký nếu chưa có tài khoản để có thể mua và xem lịch sử mua hàng.</p>
+				<p style="width: 200px;">Vui lòng đăng nhập hoặc đăng ký nếu chưa có tài khoản để có thể mua và xem lịch sử mua hàng.</p>
 			</div><!--/register-req-->
 
 			<div class="shopper-informations">
@@ -39,7 +39,7 @@
 					</div>			
 				</div>
 			</div>
-			<div class="review-payment">
+			{{-- <div class="review-payment">
 				<h2>Xem lại giở hàng</h2>
 			</div>
 
@@ -55,7 +55,7 @@
 						<label><input type="checkbox"> Paypal</label>
 					</span>
 				</div>
-		</div>
+		</div> --}}
 	</section> <!--/#cart_items-->
 
 @endsection

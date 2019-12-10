@@ -18,7 +18,7 @@ Route::post('/tim-kiem', 'HomeController@search');
 //Loại san pham trang chu
 Route::get('/loai-san-pham/{category_id}', 'CategoryProduct@show_category_home');
 Route::get('/thuong-hieu-san-pham/{brand_id}', 'BrandProduct@show_brand_home');
-Route::get('/chi-tiet-san-pham/{product_id}', 'ProductController@details_product');
+Route::get('/chi-tiet-san-pham/{product_id}', 'ProductController@details_product');//o trang home
 
 
 
@@ -64,12 +64,14 @@ Route::get('/edit-product/{product_id}', 'ProductController@edit_product');
 Route::get('/delete-product/{product_id}', 'ProductController@delete_product');
 
 
+
 //kich hoat hien thi san pham= an/hienthi
 Route::get('/unactive-product/{product_id}', 'ProductController@unactive_product');
 Route::get('/active-product/{product_id}', 'ProductController@active_product');
 
 Route::post('/save-product', 'ProductController@save_product');
 Route::post('/update-product/{product_id}', 'ProductController@update_product');
+/*Route::post('/save-comment', 'ProductController@save_comment');*/
 
 //them vao gio hang- save-cart
 Route::post('/update-cart-quantity', 'CartController@update_cart_quantity');
@@ -86,6 +88,7 @@ Route::get('/logout-checkout', 'CheckoutController@logout_checkout');
 
 Route::post('/add-customer', 'CheckoutController@add_customer');
 Route::post('/order-place', 'CheckoutController@order_place');
+
 
 Route::get('/checkout', 'CheckoutController@checkout'); 
 Route::get('/payment', 'CheckoutController@payment');

@@ -28,6 +28,7 @@ class CategoryProduct extends Controller
     public function add_category_product()
     {
         $this->AuthLogin();
+        
     	return view('admin.add_category_product');
     }
 
