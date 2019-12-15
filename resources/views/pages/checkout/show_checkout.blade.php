@@ -11,7 +11,7 @@
 			</div>
 
 			<div class="register-req">
-				<p style="width: 200px;">Vui lòng đăng nhập hoặc đăng ký nếu chưa có tài khoản để có thể mua và xem lịch sử mua hàng.</p>
+				<p >Vui lòng đăng nhập hoặc đăng ký nếu chưa có tài khoản để có thể mua và xem lịch sử mua hàng.</p>
 			</div><!--/register-req-->
 
 			<div class="shopper-informations">

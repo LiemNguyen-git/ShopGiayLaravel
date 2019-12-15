@@ -27,7 +27,7 @@
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
-<body background="control-carousel">
+<body background="control-carousel" style="background-image:url('public/frontend/images/backgound2.jpg'); background-repeat: no-repeat; background-size: cover;">
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -63,7 +63,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="http://localhost/MyLaravel/trang-chu"><img src="{{('public/frontend/images/logo1.png')}}" alt="" /></a>
+							<a href="http://localhost/MyLaravel/trang-chu"><img src="{{('public/frontend/images/logo3.png')}}" height="50px" width="150px" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right">
 							{{-- <div class="btn-group">
@@ -93,12 +93,19 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								{{-- <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-user"></i> Tài khoản</a></li> --}}
-								
+								<?php
+									$customer_id = Session::get('customer_id');
+									$order_id = Session::get('order_id');
+									if($customer_id != NULL)
+									
+
+								?>
+								<li><a href="{{URL::to('/show-order')}}"><i class="fa fa-shopping-cart"></i> Xem lại đơn hàng </a></li>
 								
 								<?php
 									$customer_id = Session::get('customer_id');
 									$shipping_id = Session::get('shipping_id');
-									if($customer_id != NULL && $shipping_id != NULL)
+									if($customer_id != NULL && $shipping_id == NULL)
 									{
 
 								?>
@@ -124,15 +131,20 @@
 								
 								<li><a href="{{URL::to('/show-cart')}}"><i class="fa fa-shopping-cart"></i> Giỏ hàng</a></li>
 
+								
+
 								<?php
 									$customer_id = Session::get('customer_id');
 									if($customer_id != NULL)
 									{
 
 								?>
-								<li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i> Đăng xuất  </a></li>
-								
-								<li> </li>
+								<li><a href="{{URL::to('/logout-checkout')}}"><i class="fa fa-lock"></i>{{$customer_name = Session::get('customer_name')}}(Đăng xuất) </a></li>
+									{{-- {{$customer_id=Session::get('customer_name')}}
+								@if('customer_id'!=NUll)
+								<li></li>
+								@endif
+								<li> </li> --}}
 								<?php
 									}else{
 								?>
@@ -141,8 +153,10 @@
 
 								<?php
 								}
-								?>															
+								?>		
+
 							</ul>
+								
 						</div>
 					</div>
 				</div>
@@ -210,40 +224,40 @@
 						
 						<div class="carousel-inner">
 							<div class="item active">
-								<div class="col-sm-6">
+								{{-- <div class="col-sm-6">
 									<h1><span></span>SHOPPING WITH</h1>
 									<h2>THICHGIAY.GA</h2>
 									<p>Giá trị sống của bạn là nhiệm vụ của chúng tôi. </p>
-									{{-- <button type="button" class="btn btn-default get">Mua ngay</button> --}}
-								</div>{{--  --}}
+									
+								</div> --}}
 								<div class="col-sm-6">
-								<img src="{{('public/frontend/images/home1.jpg')}}" height="400" width="300" class="girl img-responsive" alt="" />
-								{{-- <img src="{{('public/frontend/images/pricing.png')}}"  class="pricing" alt="" /> --}}
+								<img src="{{('public/frontend/images/baner1.jpg')}}" style="height:500px; max-width: fit-content;" class="girl img-responsive" alt="" />
+								
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-sm-6">
+								{{-- <div class="col-sm-6">
 									<h1><span></span>SHOPPING WITH</h1>
 									<h2>THICHGIAY.GA</h2>
 									<p>Thể hiện phong cách đậm chất dân chơi. </p>
-									{{-- <button type="button" class="btn btn-default get">Mua ngay</button> --}}
-								</div>
+								
+								</div> --}}
 								<div class="col-sm-6">
-									<img src="{{('public/frontend/images/home2.jpg')}}" height="800" width="500" class="girl img-responsive" alt="" />
-									{{-- <img src="{{('public/frontend/images/pricing.png')}}"  class="pricing" alt="" /> --}}
+									<img src="{{('public/frontend/images/baner2.jpg')}}" style="height:500px; max-width: fit-content;" class="girl img-responsive" alt="" />
+									
 								</div>
 							</div>
 							
 							<div class="item">
-								<div class="col-sm-6">
+								{{-- <div class="col-sm-6">
 									<h1><span></span>SHOPPING WITH</h1>
 									<h2>THICHGIAY.GA</h2>
 									<p>Từng bước chân của bạn là niềm hãnh diện của chúng tôi. </p>
-									{{-- <button type="button" class="btn btn-default get"></button> --}}
-								</div>
+									
+								</div> --}}
 								<div class="col-sm-6">
-									<img src="{{('public/frontend/images/home3.jpg')}}" height="400" width="300" class="girl img-responsive" alt="" />
-									{{-- <img src="{{('publiv/frontend/images/pricing.png')}}" class="pricing" alt="" /> --}}
+									<img src="{{('public/frontend/images/baner3.jpg')}}" style="height:500px; max-width: fit-content;" class="girl img-responsive" alt="" />
+									
 								</div>
 							</div>
 							

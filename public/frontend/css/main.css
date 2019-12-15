@@ -68,7 +68,7 @@ a#scrollUp i{
 **************************/
 
 .header_top {
-  background: none repeat scroll 0 0 #faebd7;
+  background: none repeat scroll 0 0 #f0f8ff;
 }
 
 .contactinfo ul li:first-child{
@@ -239,7 +239,7 @@ a#scrollUp i{
 }
 
 .mainmenu ul li a {
-	color: #00ffff;
+	color: #000000;
 	font-family: 'Roboto', sans-serif;
 	font-size: 17px;
 	font-weight: 300;
@@ -249,7 +249,7 @@ a#scrollUp i{
 
 .mainmenu ul li a:hover, .mainmenu ul li a.active,  .shop-menu ul li a.active{
 	background:none;
-	color:#00ffff;
+	color:#000000;
 }
 
 .search_box input {
@@ -545,7 +545,7 @@ ul.sub-menu {
 }
 
 .footer-bottom {
-  background: #faebd7;
+  background: #f0f8ff;
   padding-top: 10px;
 }
 

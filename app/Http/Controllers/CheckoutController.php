@@ -115,22 +115,23 @@ class CheckoutController extends Controller
             $payment_id = DB::table('tbl_payment')->insertGetId($data);//khi insertGetId la lay luon du lieu ma minh vua insert vao
 
             // insert vao order 
-            $content = Cart::content();
+           /* $content = Cart::content();
             foreach ($content as $val_content)
-            {
+            {*/
 
                 $order_data = array();
                /* $order_data['customer_name'] = Session::get('customer_name');*/
+                $order_data['product_id'] = Session::get('product_id');
                 $order_data['customer_id'] = Session::get('customer_id');
                 $order_data['shipping_id'] = Session::get('shipping_id');
                 $order_data['payment_id'] = $payment_id;
                 $order_data['order_total'] = Cart::total();
                 $order_data['order_status'] = 'Đang chờ xử lý';
-                $order_data['product_name'] = $val_content->name;
-                /*$order_data['order_address'] = Session::get('shipping_address');*/
-                $order_data['order_quantity'] = $val_content->qty;
+                /*$order_data['product_name'] = $val_content->name;
+                $order_data['order_address'] = Session::get('shipping_address');
+                $order_data['order_quantity'] = $val_content->qty;*/
                 $order_id = DB::table('tbl_order')->insertGetId($order_data);
-            }
+            /*}*/
             
             
             //insert vao order details
@@ -146,7 +147,7 @@ class CheckoutController extends Controller
                     /*$order_details_data['product_size'] = Session::get('product_size');
                     $order_details_data['product_color'] = Session::get('product_color');*/
                     $order_details_data['product_sales_quantity'] = $v_content->qty;
-
+                    $order_details_data['total_money'] = Cart::total();
                     DB::table('tbl_order_details')->insert($order_details_data);
                 }
             if($data['payment_method'] == 1)
@@ -155,7 +156,7 @@ class CheckoutController extends Controller
                 }
             elseif ($data['payment_method'] == 2) 
                 {
-                    Cart::destroy();
+                    /*Cart::destroy();*/
                     $cate_product = DB::table('tblcategory_product')->where('category_status','0')->orderby('category_id','desc')->get();
                     $brand_product = DB::table('tbl_brand_product')->where('brand_status','0')->orderby('brand_id','desc')->get();
 
@@ -166,39 +167,13 @@ class CheckoutController extends Controller
                 {
                     echo 'Thanh toán qua ví điện tử Momo';
                 }
-           
-
-            //return Redirect('/payment');
         }
-        public function manage_order()
-        {
-            $this->AuthLogin();
-            //hien thi tat ca sp tu database
-            $all_order = DB::table('tbl_order')
-            ->join('tbl_customers','tbl_order.customer_id','=','tbl_customers.customer_id')
-            ->select('tbl_order.*','tbl_customers.customer_name')
-            ->orderby('tbl_order.order_id','desc')->get();
-            
-            $manage_order = view('admin.manage_order')->with('all_order',$all_order);
-            return view('admin_layout')->with('admin.manage_order',$manage_order);//trang admin-layout se chua all_brand_product la bien $manager_brand_product
-            
-        }
+        
+        public function show_order()
+            {
+                $cate_product = DB::table('tblcategory_product')->where('category_status','0')->orderby('category_id','desc')->get();
+                $brand_product = DB::table('tbl_brand_product')->where('brand_status','0')->orderby('brand_id','desc')->get();
 
-
-        public function view_order($orderId)
-        {
-            
-
-            $this->AuthLogin();
-            //hien thi tat ca sp tu database
-            $order_by_id = DB::table('tbl_order')
-            ->join('tbl_customers','tbl_order.customer_id','=','tbl_customers.customer_id')
-            ->join('tbl_shipping','tbl_order.shipping_id','=','tbl_shipping.shipping_id')
-            ->join('tbl_order_details','tbl_order.order_id','=','tbl_order_details.order_id')
-            ->select('tbl_order.*','tbl_customers.*', 'tbl_shipping.*','tbl_order_details.*')->first(4);
-            
-            $manage_order_by_id = view('admin.view_order')->with('order_by_id',$order_by_id);
-            return view('admin_layout')->with('admin.view_order',$manage_order_by_id);//trang admin-layout se chua all_brand_product la bien $manager_brand_product
-            
-        }
+                return view('pages.checkout.show_order')->with('category',$cate_product)->with('brand',$brand_product);
+            }
 }

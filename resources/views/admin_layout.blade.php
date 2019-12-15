@@ -44,13 +44,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="top-nav clearfix">
     <!--search & user info start-->
     <ul class="nav pull-right top-menu">
-        <li>
+        {{-- <li>
         	<form action="{{URL::to('/tim-kiem-admin')}}" method="POST">
 							{{csrf_field()}}
             <input type="text" name="keywords_search_admin" placeholder="Nhập sản phẩm cần tìm" />
 			<input type="submit" style="margin-top: 0; color:all;#GGG;width:50px;" name="search_items" class="btn btn-primary btn-sm" value="Tìm"  />
         </form>
-        </li>
+        </li> --}}
         <!-- user login dropdown start-->
         <li class="dropdown">
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -89,7 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <li>
                     <a class="active" href="{{URL::to('/dashboard')}}">
                         <i class="fa fa-dashboard"></i>
-                        <span>Bảng điều khiển</span>
+                        <span>Dashboard</span>
                     </a>
                 </li>
                 
@@ -140,7 +140,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                        
                     </ul>
                 </li>
-                
+                 <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Quản lý khách hàng</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/all-customers')}}">Danh sách khách hàng</a></li>
+						
+                       
+                    </ul>
+                </li>
+                 <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Quản lý bình luận</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="{{URL::to('/all-comment')}}">Liệt kê bình luận khách hàng</a></li>
+						
+                       
+                    </ul>
+                </li>
             </ul>            </div>
         <!-- sidebar menu end-->
     </div>

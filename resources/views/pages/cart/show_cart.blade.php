@@ -6,7 +6,7 @@
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="http://localhost/MyLaravel/trang-chu">Trang chủ</a></li>
-				  <li class="active" style="text-align: center;">Giỏ hàng của bạn</li>
+				  <li class="active" style="font-size: 50px;">Giỏ hàng của bạn</li>
 				</ol>
 			</div>
 			<div class="table-responsive cart_info">
@@ -14,7 +14,7 @@
 					$content = Cart::content();
 					
 				?>
-				<table class="table table-condensed">
+				<table class="table table-condensed" >
 					<thead>
 						<tr class="cart_menu" >
 							<td class="image">Hình ảnh</td>
@@ -159,25 +159,34 @@
 							<li>Thành tiền <span>{{Cart::total().' '.'VNĐ'}}</span></li>
 						</ul>
 							{{-- <a class="btn btn-default update" href="">Update</a> --}}
-							<?php
+							   	
+
+
+								<?php
 									$customer_id = Session::get('customer_id');
-									if($customer_id != NULL)
+									$shipping_id = Session::get('shipping_id');
+									if($customer_id != NULL && $shipping_id == NULL)
 									{
 
 								?>
-								<a class="btn btn-default check_out" href="{{URL::to('/checkout')}}">Thanh toán</a>
+								<a href="{{URL::to('/checkout')}}" class="btn btn-default check_out"> Thanh toán </a>
 								
 
 								<?php
-									}else{
+									}
+									elseif($customer_id != NULL && $shipping_id != NULL)
+									{
 								?>
 
-								<a class="btn btn-default check_out" href="{{URL::to('/login-checkout')}}">Thanh toán</a>
+								<a href="{{URL::to('/payment')}}" class="btn btn-default check_out">Thanh toán</a>
 
 								<?php
-								}
+								}else{
 								?>			
-
+								<a href="{{URL::to('/login-checkout')}}" class="btn btn-default check_out"> Thanh toán</a>
+								<?php
+								}
+								?>	
 							
 					</div>
 				</div>

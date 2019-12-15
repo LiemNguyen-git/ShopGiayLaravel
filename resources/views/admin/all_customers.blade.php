@@ -3,9 +3,16 @@
 <div class="table-agile-info">
   <div class="panel panel-default">
     <div class="panel-heading">
-      Thông tin chi tiết đơn hàng và vận chuyển
+      Danh sách khách hàng
     </div>
-    
+    <div class="row w3-res-tb">
+     
+      <div class="col-sm-8">
+      </div>
+      <div class="col-sm-3">
+        
+      </div>
+    </div>
     <div class="table-responsive">
 <!-- thong bao kich hoat danh muc -->
       <?php
@@ -25,44 +32,44 @@
               </label>
             </th>
             <th>Tên khách hàng</th>
-            <th>Tên người vận chuyển</th>
-            <th>Tên sản phẩm</th>
-            <th>Số lượng</th>
-            <th>Giá</th>
-            <th>Địa chỉ nhận hàng</th>
+            <th>Email</th>
             <th>Số điện thoại</th>
-            
-            <th>Tổng tiền</th>
-            
-           
+            <th>Mật khẩu</th>
+            <th>Địa chỉ</th>
             
 
             <th style="width:30px;"></th>
           </tr>
         </thead>
-        <tbody>   
+        <tbody>
 
-          @foreach($order_by_id as $order_detail)
-          
-         
+          @foreach($all_customers as $key => $customer)
+
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
-            <td>{{ $order_detail->customer_name }} </td>
-            <td>{{ $order_detail->shipping_name }}</td>
-            <td>{{ $order_detail->product_name }} </td>
-            <td>{{ $order_detail->order_quantity}} </td>
-            <td>{{ $order_detail->product_price}} </td>
-            <td>{{ $order_detail->shipping_address }} </td>
-            <td>{{ $order_detail->customer_phone }} </td>
-            <td>{{ $order_detail->total_money}} </td>
+            <td>{{ $customer->customer_name }}</td>
+            <td>{{ $customer->customer_email }}</td>
+            <td>{{ $customer->customer_phone }}</td>
+            <td>{{ $customer->customer_password }}</td>
+            <td>{{ $customer->customer_address }}</td>
+
             
-          </tr>  
+            <td>
+              
+    <!-- pencil-square co nghia la  -->
+    <!-- onclick kiem tra xoa -->
+              <a onclick="return confirm('Bạn có chắc muốn xóa khách hàng này không?')" href="{{URL::to('/delete-customer/'.$customer->customer_id)}}" class="active" ui-toggle-class="">
+                <i class="fa fa-times text-danger text"></i></a>
+            </td>
+            
+          </tr>
+
           @endforeach
-          
+
         </tbody>
       </table>
     </div>
-     <footer class="panel-footer">
+    <footer class="panel-footer">
       <div class="row">
         
         <div class="col-sm-5 text-center">
@@ -81,5 +88,4 @@
     </footer>
   </div>
 </div>
-
 @endsection
